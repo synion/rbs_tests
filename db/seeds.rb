@@ -35,3 +35,9 @@ puts 'Finished: creating Roles'
 puts 'Starting: creating Categories'
 10.times { create(:category) }
 puts 'Finished: creating Categories'
+
+puts 'Starting: creating MoviesCategories'
+Movie.all.each do |movie|
+  movie.categories = Category.where(id: Category.ids.sample(rand(1..3)))
+end
+puts 'Finished: creating Categories'
