@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_510_085_614) do
+ActiveRecord::Schema[7.0].define(version: 20_220_510_092_108) do
   create_table 'actors', force: :cascade do |t|
     t.string 'first_name', null: false
     t.string 'last_name', null: false
@@ -42,6 +42,18 @@ ActiveRecord::Schema[7.0].define(version: 20_220_510_085_614) do
     t.index ['country_id'], name: 'index_movies_on_country_id'
   end
 
+  create_table 'roles', force: :cascade do |t|
+    t.string 'name'
+    t.integer 'movie_id', null: false
+    t.integer 'actor_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['actor_id'], name: 'index_roles_on_actor_id'
+    t.index ['movie_id'], name: 'index_roles_on_movie_id'
+  end
+
   add_foreign_key 'actors', 'countries'
   add_foreign_key 'movies', 'countries'
+  add_foreign_key 'roles', 'actors'
+  add_foreign_key 'roles', 'movies'
 end

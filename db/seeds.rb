@@ -23,3 +23,11 @@ puts 'Starting: creating Actors'
 8.times { create(:actor, country: Country.find(4)) }
 3.times { create(:actor, country: Country.find(5)) }
 puts 'Finished: creating Actors'
+
+puts 'Starting: creating Roles'
+Movie.ids.each do |movie_id|
+  Actor.ids.sample(rand(10..Actor.count)).each do |actor_id|
+    create(:role, actor_id:, movie_id:)
+  end
+end
+puts 'Finished: creating Roles'
