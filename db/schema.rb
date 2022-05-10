@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_510_092_108) do
+ActiveRecord::Schema[7.0].define(version: 20_220_510_095_504) do
   create_table 'actors', force: :cascade do |t|
     t.string 'first_name', null: false
     t.string 'last_name', null: false
@@ -21,6 +21,12 @@ ActiveRecord::Schema[7.0].define(version: 20_220_510_092_108) do
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.index ['country_id'], name: 'index_actors_on_country_id'
+  end
+
+  create_table 'categories', force: :cascade do |t|
+    t.string 'name', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
   create_table 'countries', force: :cascade do |t|

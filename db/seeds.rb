@@ -31,3 +31,7 @@ Movie.ids.each do |movie_id|
   end
 end
 puts 'Finished: creating Roles'
+
+puts 'Starting: creating Categories'
+10.times { create(:category) }
+puts 'Finished: creating Categories'
