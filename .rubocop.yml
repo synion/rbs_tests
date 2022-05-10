@@ -14,5 +14,8 @@ AllCops:
     - bin/*
 Layout/LineLength:
   Max: 120
+Metrics/BlockLength:
+  Exclude:
+    - db/schema.rb
 Style/Documentation:
   Enabled: false
