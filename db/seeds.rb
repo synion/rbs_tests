@@ -47,3 +47,9 @@ puts 'Starting: creating Platforms'
   create(:platform, name: platform_name)
 end
 puts 'Finished: creating Platforms'
+
+puts 'Starting: creating MoviesPlatforms'
+Movie.all.each do |movie|
+  movie.platforms = Platform.where(id: Platform.ids.sample(rand(0..2)))
+end
+puts 'Finished: creating MoviesPlatforms'
