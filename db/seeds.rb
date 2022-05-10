@@ -40,4 +40,10 @@ puts 'Starting: creating MoviesCategories'
 Movie.all.each do |movie|
   movie.categories = Category.where(id: Category.ids.sample(rand(1..3)))
 end
-puts 'Finished: creating Categories'
+puts 'Finished: creating MoviesCategories'
+
+puts 'Starting: creating Platforms'
+['HBO MAX', 'Netflix', 'Hulu', 'Disney+', 'Prime Video'].each do |platform_name|
+  create(:platform, name: platform_name)
+end
+puts 'Finished: creating Platforms'
