@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  scope path: Graphiti::BaseResource.endpoint_namespace, defaults: { format: :jsonapi } do
+    resources :actors, controller: 'graphiti/actors'
+    resources :countries, controller: 'graphiti/countries'
+    resources :movies, controller: 'graphiti/movies'
+    resources :roles, controller: 'graphiti/roles'
+  end
 end

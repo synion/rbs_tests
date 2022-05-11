@@ -2,6 +2,8 @@
 
 class Movie < ApplicationRecord
   belongs_to :country
+  has_many :roles
+  has_many :actors, through: :roles
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :platforms
 
