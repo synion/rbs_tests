@@ -14,8 +14,14 @@ AllCops:
     - bin/*
 Layout/LineLength:
   Max: 120
+Metrics/MethodLength:
+  Exclude:
+   - app/controllers/graphql_controller.rb
 Metrics/BlockLength:
   Exclude:
     - db/schema.rb
+Naming/MethodParameterName:
+  Exclude:
+    - app/controllers/graphql_controller.rb 
 Style/Documentation:
   Enabled: false
