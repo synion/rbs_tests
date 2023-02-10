@@ -109,9 +109,6 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    graphiql-rails (1.8.0)
-      railties
-      sprockets-rails
     graphiti (1.3.7)
       activesupport (>= 5.2)
       concurrent-ruby (~> 1.0)
@@ -179,6 +176,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.6-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.22.1)
@@ -223,6 +222,10 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    rbs (2.8.4)
+    rbs_rails (0.11.0)
+      parser
+      rbs (>= 1)
     regexp_parser (2.4.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -282,13 +285,6 @@ GEM
       thor (~> 1.0)
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
-    sprockets (4.0.3)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
-    sprockets-rails (3.4.2)
-      actionpack (>= 5.2)
-      activesupport (>= 5.2)
-      sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
     strscan (3.0.2)
     thor (1.2.1)
@@ -306,6 +302,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-21
 
 DEPENDENCIES
@@ -313,7 +310,6 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
-  graphiql-rails
   graphiti-rails
   graphiti_spec_helpers
   graphql
@@ -321,6 +317,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.3)
+  rbs_rails
   responders
   rspec-rails
   rubocop

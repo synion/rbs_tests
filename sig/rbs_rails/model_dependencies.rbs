@@ -1,0 +1,14 @@
+class ApplicationRecord < ActiveRecord::Base
+end
+class Movie::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+end
+class Role::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+end
+class Actor::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
+end
+class ActiveRecord::Associations::CollectionProxy < ActiveRecord::Relation
+end
+class ActiveRecord::Relation < Object
+end
+module ActiveRecord::Associations
+end

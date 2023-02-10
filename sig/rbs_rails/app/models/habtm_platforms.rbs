@@ -1,0 +1,110 @@
+class Movie < ::ApplicationRecord
+  class HABTM_Platforms < ::ActiveRecord::Base
+    extend _ActiveRecord_Relation_ClassMethods[Movie::HABTM_Platforms, ActiveRecord_Relation, top]
+
+    module GeneratedAttributeMethods
+      def movie_id: () -> Integer
+
+      def movie_id=: (Integer) -> Integer
+
+      def movie_id?: () -> bool
+
+      def movie_id_changed?: () -> bool
+
+      def movie_id_change: () -> [ Integer?, Integer? ]
+
+      def movie_id_will_change!: () -> void
+
+      def movie_id_was: () -> Integer?
+
+      def movie_id_previously_changed?: () -> bool
+
+      def movie_id_previous_change: () -> Array[Integer?]?
+
+      def movie_id_previously_was: () -> Integer?
+
+      def movie_id_before_last_save: () -> Integer?
+
+      def movie_id_change_to_be_saved: () -> Array[Integer?]?
+
+      def movie_id_in_database: () -> Integer?
+
+      def saved_change_to_movie_id: () -> Array[Integer?]?
+
+      def saved_change_to_movie_id?: () -> bool
+
+      def will_save_change_to_movie_id?: () -> bool
+
+      def restore_movie_id!: () -> void
+
+      def clear_movie_id_change: () -> void
+
+      def platform_id: () -> Integer
+
+      def platform_id=: (Integer) -> Integer
+
+      def platform_id?: () -> bool
+
+      def platform_id_changed?: () -> bool
+
+      def platform_id_change: () -> [ Integer?, Integer? ]
+
+      def platform_id_will_change!: () -> void
+
+      def platform_id_was: () -> Integer?
+
+      def platform_id_previously_changed?: () -> bool
+
+      def platform_id_previous_change: () -> Array[Integer?]?
+
+      def platform_id_previously_was: () -> Integer?
+
+      def platform_id_before_last_save: () -> Integer?
+
+      def platform_id_change_to_be_saved: () -> Array[Integer?]?
+
+      def platform_id_in_database: () -> Integer?
+
+      def saved_change_to_platform_id: () -> Array[Integer?]?
+
+      def saved_change_to_platform_id?: () -> bool
+
+      def will_save_change_to_platform_id?: () -> bool
+
+      def restore_platform_id!: () -> void
+
+      def clear_platform_id_change: () -> void
+    end
+    include GeneratedAttributeMethods
+
+    def left_side: () -> Movie
+    def left_side=: (Movie?) -> Movie?
+    def reload_left_side: () -> Movie?
+    def build_left_side: (untyped) -> Movie
+    def create_left_side: (untyped) -> Movie
+    def create_left_side!: (untyped) -> Movie
+    def platform: () -> Platform
+    def platform=: (Platform?) -> Platform?
+    def reload_platform: () -> Platform?
+    def build_platform: (untyped) -> Platform
+    def create_platform: (untyped) -> Platform
+    def create_platform!: (untyped) -> Platform
+    module GeneratedAssociationMethods
+    end
+    include GeneratedAssociationMethods
+
+    module GeneratedRelationMethods
+    end
+
+    class ActiveRecord_Relation < ::ActiveRecord::Relation
+      include GeneratedRelationMethods
+      include _ActiveRecord_Relation[Movie::HABTM_Platforms, top]
+      include Enumerable[Movie::HABTM_Platforms]
+    end
+
+    class ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+      include GeneratedRelationMethods
+      include _ActiveRecord_Relation[Movie::HABTM_Platforms, top]
+    end
+  end
+end

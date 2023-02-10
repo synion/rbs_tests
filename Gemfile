@@ -12,6 +12,7 @@ gem 'rails', '~> 7.0.3'
 gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
+gem 'rbs_rails', require: false
 gem 'puma', '~> 5.0'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]

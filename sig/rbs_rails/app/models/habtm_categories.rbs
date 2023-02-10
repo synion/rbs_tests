@@ -1,0 +1,110 @@
+class Movie < ::ApplicationRecord
+  class HABTM_Categories < ::ActiveRecord::Base
+    extend _ActiveRecord_Relation_ClassMethods[Movie::HABTM_Categories, ActiveRecord_Relation, top]
+
+    module GeneratedAttributeMethods
+      def movie_id: () -> Integer
+
+      def movie_id=: (Integer) -> Integer
+
+      def movie_id?: () -> bool
+
+      def movie_id_changed?: () -> bool
+
+      def movie_id_change: () -> [ Integer?, Integer? ]
+
+      def movie_id_will_change!: () -> void
+
+      def movie_id_was: () -> Integer?
+
+      def movie_id_previously_changed?: () -> bool
+
+      def movie_id_previous_change: () -> Array[Integer?]?
+
+      def movie_id_previously_was: () -> Integer?
+
+      def movie_id_before_last_save: () -> Integer?
+
+      def movie_id_change_to_be_saved: () -> Array[Integer?]?
+
+      def movie_id_in_database: () -> Integer?
+
+      def saved_change_to_movie_id: () -> Array[Integer?]?
+
+      def saved_change_to_movie_id?: () -> bool
+
+      def will_save_change_to_movie_id?: () -> bool
+
+      def restore_movie_id!: () -> void
+
+      def clear_movie_id_change: () -> void
+
+      def category_id: () -> Integer
+
+      def category_id=: (Integer) -> Integer
+
+      def category_id?: () -> bool
+
+      def category_id_changed?: () -> bool
+
+      def category_id_change: () -> [ Integer?, Integer? ]
+
+      def category_id_will_change!: () -> void
+
+      def category_id_was: () -> Integer?
+
+      def category_id_previously_changed?: () -> bool
+
+      def category_id_previous_change: () -> Array[Integer?]?
+
+      def category_id_previously_was: () -> Integer?
+
+      def category_id_before_last_save: () -> Integer?
+
+      def category_id_change_to_be_saved: () -> Array[Integer?]?
+
+      def category_id_in_database: () -> Integer?
+
+      def saved_change_to_category_id: () -> Array[Integer?]?
+
+      def saved_change_to_category_id?: () -> bool
+
+      def will_save_change_to_category_id?: () -> bool
+
+      def restore_category_id!: () -> void
+
+      def clear_category_id_change: () -> void
+    end
+    include GeneratedAttributeMethods
+
+    def left_side: () -> Movie
+    def left_side=: (Movie?) -> Movie?
+    def reload_left_side: () -> Movie?
+    def build_left_side: (untyped) -> Movie
+    def create_left_side: (untyped) -> Movie
+    def create_left_side!: (untyped) -> Movie
+    def category: () -> Category
+    def category=: (Category?) -> Category?
+    def reload_category: () -> Category?
+    def build_category: (untyped) -> Category
+    def create_category: (untyped) -> Category
+    def create_category!: (untyped) -> Category
+    module GeneratedAssociationMethods
+    end
+    include GeneratedAssociationMethods
+
+    module GeneratedRelationMethods
+    end
+
+    class ActiveRecord_Relation < ::ActiveRecord::Relation
+      include GeneratedRelationMethods
+      include _ActiveRecord_Relation[Movie::HABTM_Categories, top]
+      include Enumerable[Movie::HABTM_Categories]
+    end
+
+    class ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+      include GeneratedRelationMethods
+      include _ActiveRecord_Relation[Movie::HABTM_Categories, top]
+    end
+  end
+end
