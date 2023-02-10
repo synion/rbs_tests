@@ -12,4 +12,13 @@ class Movie < ApplicationRecord
   validates :number_of_votes, numericality: { greater_than_or_equal_to: 0 }, if: :number_of_votes
   validates :duration_in_minutes, numericality: { greater_than_or_equal_to: 0 }, if: :duration_in_minutes
   validates :rate, numericality: { greater_than_or_equal_to: 0 }, if: :rate
+
+
+  def custom_name
+    "#{title}_#{country_id}"
+  end
+  
+  def ouo
+    1
+  end
 end

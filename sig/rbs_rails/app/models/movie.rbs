@@ -1,6 +1,7 @@
 class Movie < ::ApplicationRecord
   extend _ActiveRecord_Relation_ClassMethods[Movie, ActiveRecord_Relation, Integer]
-
+  def custom_name: () -> Integer
+  def ouo: () -> String
   module GeneratedAttributeMethods
     def id: () -> Integer
 
@@ -378,6 +379,7 @@ class Movie < ::ApplicationRecord
   def build_country: (untyped) -> Country
   def create_country: (untyped) -> Country
   def create_country!: (untyped) -> Country
+  # def custom_name: () -> Integer
   module GeneratedAssociationMethods
   end
   include GeneratedAssociationMethods
